@@ -1,5 +1,6 @@
 
 import React, { Component } from "react";
+import { Container } from "../components/Grid/Grid";
 import Navbar from "../components/Navbar/Nav";
 
 
@@ -56,7 +57,9 @@ class Home extends Component {
         return (
             <div>
                 <Navbar />
-            
+                <Container fluid>
+                
+                </Container>
             </div>
         )
     }
