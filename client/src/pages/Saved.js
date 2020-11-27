@@ -2,8 +2,8 @@ import React, { Component } from 'react'
 import { Container } from "../components/Grid/Grid";
 import Nav from "../components/Nav/Nav";
 import Jumbotron from "../components/Jumbotron/Jumbotron";
-import SavedList from "../components/SavedList/SavedList";
 import API from '../utils/API';
+import SavedList from "../components/SavedList/SavedList";
 
 class Saved extends Component {
 
