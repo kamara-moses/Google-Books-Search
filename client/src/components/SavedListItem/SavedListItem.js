@@ -1,22 +1,27 @@
-import React from 'react';
+import React, { Component } from 'react';
+import SavedListItem from "../SavedListItem/SavedListItem";
 
-function ResultListItem(props) {
-    const {title, authors, image, link, description, deleteGoogleBook} = props
-    return (
-        <div>
-            <div className="card">
-                <div className="card-header"></div>
-                <div className="card-body">
-                    <img src={image} style={{maxWidth: "100px"}} alt="jumbotron"/>
-                    <h5 className="card-title" style={{margin: "10px 0"}}>{title}</h5>
-                    <p className="card-text" >{description}</p>
-                    <p style={{fontStyle: "italic"}}>Author(s): {authors}</p>
-                    <a href={link} target="_blank" rel="noopener noreferrer" className="btn" style={{marginRight: "6px", backgroundColor: "rgb(33, 150, 243)", color: "white"}}>View Book</a>
-                    <button onClick={deleteGoogleBook.bind(this, props)} className="btn btn-primary">Delete</button>
-                </div>
-            </div>
-        </div>
-    )
+class ResultList extends Component {
+
+
+    render() {
+        console.log("Props", this.props.bookState)
+        return (
+            this.props.bookState.map((book) => (
+            <SavedListItem 
+            key={book._id}
+            id={book._id}
+            title={book.title}
+            link={book.link}
+            authors={book.authors && book.authors.length > 1 ? book.authors.join(", ") : book.authors}
+            image={book.image ? book.image : "https://previews.123rf.com/images/pavelstasevich/pavelstasevich1811/pavelstasevich181101065/112815953-no-image-available-icon-flat-vector.jpg"}
+            description={book.description}
+            deleteGoogleBook={this.props.deleteGoogleBook}
+            />
+        ))
+        )
+                           
+    }
 }
 
-export default ResultListItem;
+export default ResultList
