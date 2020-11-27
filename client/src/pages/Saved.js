@@ -2,6 +2,7 @@ import React, { Component } from 'react'
 import { Container } from "../components/Grid/Grid";
 import Nav from "../components/Nav/Nav";
 import Jumbotron from "../components/Jumbotron/Jumbotron";
+import SavedList from "../components/SavedList/SavedList";
 import API from '../utils/API';
 
 class Saved extends Component {
@@ -45,7 +46,15 @@ class Saved extends Component {
                 <Nav />
                 <Container fluid>
                 <Jumbotron />
-                
+                {this.state.savedBooks.length ? (
+                    <SavedList 
+                    bookState={this.state.savedBooks}
+                    deleteGoogleBook={this.deleteGoogleBook}
+                    >
+                    </SavedList>
+                ) : (
+                    <h5>No results to display</h5>
+                )}
                 </Container>
             </div>
         )
