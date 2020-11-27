@@ -3,6 +3,7 @@ import React, { Component } from "react";
 import { Container } from "../components/Grid/Grid";
 import Navbar from "../components/Navbar/Nav";
 import Jumbotron from "../components/Jumbotron/Jumbotron";
+import {Input, SubmitBtn} from "../components/Search/Search";
 
 
 class Home extends Component {
@@ -60,6 +61,16 @@ class Home extends Component {
                 <Navbar />
                 <Container fluid>
                     <Jumbotron />
+                    <form>
+                    <h5>Search for books</h5>
+                    <Input 
+                        value={this.state.search}
+                        onChange={this.handleInputChange}
+                        name="search"
+                        placeholder="e.g. Twilight"
+                    />
+                    <SubmitBtn onClick={this.handleFormSubmit}/>
+                </form>
                 
                 </Container>
             </div>
