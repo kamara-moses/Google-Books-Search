@@ -1,4 +1,10 @@
 .navbar {
-    background-color: #79c0fa;
+    background-color: #c9c5c5;
     margin-bottom: 10px;
 }
+
+.navbar .nav-item .nav-link:hover {
+    background-color: #fff;
+    color: #c9c5c5;
+}
+

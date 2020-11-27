@@ -2,6 +2,7 @@
 import React, { Component } from "react";
 import { Container } from "../components/Grid/Grid";
 import Navbar from "../components/Navbar/Nav";
+import Jumbotron from "../components/Jumbotron/Jumbotron";
 
 
 class Home extends Component {
@@ -58,6 +59,7 @@ class Home extends Component {
             <div>
                 <Navbar />
                 <Container fluid>
+                    <Jumbotron />
                 
                 </Container>
             </div>
