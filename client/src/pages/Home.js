@@ -49,7 +49,9 @@ class Home extends Component {
       image: currentBook.image,
       link: currentBook.link,
     })
-      .then(this.setState({ message: alert("Your { currentBook.title } has been saved") }))
+       //Display to all users that the book was saved. 
+       window.M.toast({ html: 'Book saved!' });
+       window.ioSocket.emit('message', `A new book titled '${currentBook.title}' was saved!`)
       .catch((err) => console.log("this is the error", err));
   };
 

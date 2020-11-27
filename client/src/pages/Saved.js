@@ -17,7 +17,12 @@ class Saved extends Component {
 
     deleteGoogleBook = currentBook => {
         API.deleteBook( currentBook.id )
-        .then(this.setState({ message: alert("Your {currentBook.title} has been deleted") }))
+        .then(() => {
+            window.M.toast({ html: 'Book deleted!' });
+            //Get all the books saved to the database and set the state
+            //Refresh books will also unlock the screen when completed
+            this.refreshBooks();
+        })
         .catch(err => {
             console.log("This is the error", err);
         })
