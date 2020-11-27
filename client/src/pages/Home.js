@@ -3,6 +3,7 @@ import { Container } from "../components/Grid/Grid";
 import Navbar from "../components/Navbar/Nav";
 import Jumbotron from "../components/Jumbotron/Jumbotron";
 import { Input, SubmitBtn } from "../components/Search/Search";
+import ResultList from "../components/ResultList/ResultList";
 
 class Home extends Component {
   state = {
@@ -67,6 +68,17 @@ class Home extends Component {
             />
             <SubmitBtn onClick={this.handleFormSubmit} />
           </form>
+          {this.state.books.length ? (
+                    <ResultList 
+                    bookState={this.state.books}
+                    saveGoogleBook={this.saveGoogleBook}>
+                    </ResultList>
+                ) : (
+                    <div>
+                        <hr/>
+                    <p style={{fontStyle: "italic"}}>No results to display</p>
+                    </div>
+                )}
         </Container>
       </div>
     );
