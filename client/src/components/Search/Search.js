@@ -1,4 +1,5 @@
-import React from 'react'
+import React from 'react';
+import './Search.css'
 
 export function Input(props) {
     return (
