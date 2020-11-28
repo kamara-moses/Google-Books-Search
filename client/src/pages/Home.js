@@ -50,10 +50,8 @@ class Home extends Component {
       image: currentBook.image,
       link: currentBook.link,
     })
-       //Display to all users that the book was saved. 
-       window.M.toast({ html: 'Book saved!' });
-       window.ioSocket.emit('message', `A new book titled '${currentBook.title}' was saved!`)
-      .catch((err) => console.log("this is the error", err));
+    .then(res => console.log("Successful POST to DB!", res))
+    .catch(err => console.log("this is the error", err));
   };
 
   render() {
