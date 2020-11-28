@@ -52,7 +52,7 @@ class Home extends Component {
     })
                 //Display to all users that the book was saved. 
                 window.M.toast({ html: 'Book saved!' });
-                Socket.emit('message', `A new book titled '${currentBook.title}' was saved!`)
+                ioSocket.emit('message', `A new book titled '${currentBook.title}' was saved!`)
     .catch(err => console.log("this is the error", err));
   };
 
