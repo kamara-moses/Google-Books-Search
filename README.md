@@ -4,7 +4,7 @@
 ## Description:
 An application created using the MERN stack and allows users to search for books via the Google Books API. Search results are dynamically rendered in the UI and users have the option to save and/or delete books. Users are notified of saving or deleting books from the db using Socket.io.
 
-<img src="../../../img/googlebooks.png" alt="Google Books Search">
+<img src="client/src/assets/img/googlebooks.png" alt="Google Books Search">
 
 ## Technologies:
 - Bootstrap
@@ -52,25 +52,31 @@ To Visit App:
 
 ## How It Works
     1. Users are first directed to the Home page where they can search for any book. 
-    <br /> Book information is retrived via the publicly available Google Books API.
+    Book information is retrived via the publicly available Google Books API.
 
     2. Upon searching for a book, users will see a list of relevant results. T
-    <br />hey can click save to save the book to the Saved page. In the back end, 
-    <br />the book is saved to the Mongo database.
+    hey can click save to save the book to the Saved page. In the back end, 
+    the book is saved to the Mongo database.
 
     3. Users can save as many books as they want. If they then go to the Saved page, 
-    <br />they'll not only see books that have been saved by them, but also previous 
-    <br />visitor's saved books (it's basically a shared space of saved books).
+    they'll not only see books that have been saved by them, but also previous 
+    visitor's saved books (it's basically a shared space of saved books).
 
-    4. Upon clicking the save button, users will be notified that they saved a book with the title to the DB.
+    4. Upon clicking the save button, users will be notified that they saved a book with 
+    the title to the DB.
 
-    5. In either the Home or Saved pages, a user can click on the View Book button. This will redirect them to the Google Books store page where they can either purchase or read a preview of the book.
+    5. In either the Home or Saved pages, a user can click on the View Book button. This 
+    will redirect them to the Google Books store page where they can either purchase or read
+     a preview of the book.
 
-    6. If a user wants to remove a saved book from the list, they may click the Delete button to remove the book from the page. In the back end, this deletes the document from the Mongo database.
+    6. If a user wants to remove a saved book from the list, they may click the Delete button 
+    to remove the book from the page. In the back end, this deletes the document from the Mongo 
+    database.
 
-    7. Upon clicking the delete button, users will be notified that they delete the book with the title of the DB.
+    7. Upon clicking the delete button, users will be notified that they delete the book with 
+    the title of the DB.
 
-![Google Books Search Demo](../../img/google-books.gif)
+![Google Books Search Demo](client/src/assets/img/google-books.gif)
 
 
 ## Contributors
