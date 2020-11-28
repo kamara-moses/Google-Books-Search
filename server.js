@@ -20,11 +20,10 @@ app.use(routes);
 // Connect to MongoDB
 mongoose.connect(process.env.MONGODB_URI || 'mongodb://localhost/Google-Books', { useNewUrlParser: true });
 
-//Connect to socket io
-io.on('connection', function(socket){
-  console.log("User connected");
-  socket.on('message', function(msg){
-    io.emit('message', msg);
+io.on('connection', client => {
+  client.on('notifyUser', () => {
+    console.log('client is saving book to db ');
+    client.emit('timer', new Date());
   });
 });
 

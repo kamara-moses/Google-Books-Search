@@ -4,6 +4,7 @@ import Navbar from "../components/Navbar/Nav";
 import Jumbotron from "../components/Jumbotron/Jumbotron";
 import { Input, SubmitBtn } from "../components/Search/Search";
 import ResultList from "../components/ResultList/ResultList";
+import AlertMessage from "../components/AlertMessage/AlertMessage";
 import API from "../utils/API";
 
 class Home extends Component {
@@ -71,6 +72,10 @@ class Home extends Component {
             />
             <SubmitBtn onClick={this.handleFormSubmit} />
           </form>
+          {this.state.updateBook 
+                        ? <AlertMessage heading="Book saved" message={`"${this.state.savedBookTitle}" has been added to favorites.`}/>
+                        : null
+        } 
           {this.state.books.length ? (
                     <ResultList 
                     bookState={this.state.books}
