@@ -13,7 +13,7 @@
     "build": "cd client && npm run build",
     "heroku-postbuild": "npm run build"
   },
-  "author": "",
+  "author": "Moses Kamara",
   "license": "ISC",
   "devDependencies": {
     "concurrently": "^5.3.0",
