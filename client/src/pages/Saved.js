@@ -17,10 +17,10 @@ class Saved extends Component {
 
     deleteGoogleBook = currentBook => {
         API.deleteBook( currentBook.id )
-        .then(res => {
-            console.log("You deleted this book:", res);
-            this.getBooks();
-        })
+        .then(
+            window.M.toast({ html: `A book titled '${currentBook.title}' was deleted!` }),
+            this.getBooks()
+        )
         .catch(err => {
             console.log("This is the error", err);
         })
