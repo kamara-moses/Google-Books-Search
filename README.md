@@ -4,7 +4,7 @@
 ## Description:
 An application created using the MERN stack and allows users to search for books via the Google Books API. Search results are dynamically rendered in the UI and users have the option to save and/or delete books. Users are notified of saving or deleting books from the db using Socket.io.
 
-<img src="../../img/googlebooks.png" alt="Google Books Search">
+<img src="../../../img/googlebooks.png" alt="Google Books Search">
 
 ## Technologies:
 - Bootstrap
@@ -51,11 +51,16 @@ To Visit App:
     - localhost:3000
 
 ## How It Works
-    1. Users are first directed to the Home page where they can search for any book. Book information is retrived via the publicly available Google Books API.
+    1. Users are first directed to the Home page where they can search for any book. 
+    <br /> Book information is retrived via the publicly available Google Books API.
 
-    2. Upon searching for a book, users will see a list of relevant results. They can click save to save the book to the Saved page. In the back end, the book is saved to the Mongo database.
+    2. Upon searching for a book, users will see a list of relevant results. T
+    <br />hey can click save to save the book to the Saved page. In the back end, 
+    <br />the book is saved to the Mongo database.
 
-    3. Users can save as many books as they want. If they then go to the Saved page, they'll not only see books that have been saved by them, but also previous visitor's saved books (it's basically a shared space of saved books).
+    3. Users can save as many books as they want. If they then go to the Saved page, 
+    <br />they'll not only see books that have been saved by them, but also previous 
+    <br />visitor's saved books (it's basically a shared space of saved books).
 
     4. Upon clicking the save button, users will be notified that they saved a book with the title to the DB.
 
