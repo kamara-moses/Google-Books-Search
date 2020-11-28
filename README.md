@@ -51,30 +51,24 @@ To Visit App:
     - localhost:3000
 
 ## How It Works
-    1. Users are first directed to the Home page where they can search for any book. 
-    Book information is retrived via the publicly available Google Books API.
+    1. Users are first directed to the Home page where they can search for any book. Book information 
+    is retrived via the publicly available Google Books API.
 
-    2. Upon searching for a book, users will see a list of relevant results. T
-    hey can click save to save the book to the Saved page. In the back end, 
-    the book is saved to the Mongo database.
+    2. Upon searching for a book, users will see a list of relevant results. They can click save to save 
+    the book to the Saved page. In the back end, the book is saved to the Mongo database.
 
-    3. Users can save as many books as they want. If they then go to the Saved page, 
-    they'll not only see books that have been saved by them, but also previous 
-    visitor's saved books (it's basically a shared space of saved books).
+    3. Users can save as many books as they want. If they then go to the Saved page, they'll not only see 
+    books that have been saved by them, but also previous visitor's saved books.
 
-    4. Upon clicking the save button, users will be notified that they saved a book with 
-    the title to the DB.
+    4. Upon clicking the save button, users will be notified that they saved a book with the title to the DB.
 
-    5. In either the Home or Saved pages, a user can click on the View Book button. This 
-    will redirect them to the Google Books store page where they can either purchase or read
-     a preview of the book.
+    5. In either the Home or Saved pages, a user can click on the View Book button. This will redirect them to 
+    the Google Books store page where they can either purchase or read a preview of the book.
 
-    6. If a user wants to remove a saved book from the list, they may click the Delete button 
-    to remove the book from the page. In the back end, this deletes the document from the Mongo 
-    database.
+    6. If a user wants to remove a saved book from the list, they may click the Delete button to remove the book 
+    from the page. In the back end, this deletes the document from the Mongo database.
 
-    7. Upon clicking the delete button, users will be notified that they delete the book with 
-    the title of the DB.
+    7. Upon clicking the delete button, users will be notified that they delete the book with the title of the DB.
 
 ![Google Books Search Demo](client/src/assets/img/google-books.gif)
 
@@ -88,6 +82,13 @@ See the section about [running tests](https://facebook.github.io/create-react-ap
 
 
 ## Challenges
+Wheww, this was a challenging build for sure. I use the boilerplate that was provided of course but still needed to add other technologies to make it functional.
+
+I found it diffult trying to manipulate the components to create the different aspects of the application. I added a new technology that I have not used before Msterialize to create ham menu and sidenav bar from the ham menu. That took some time and some research because I tried everything but still was not working. I was able to stumble upon a Medium post that gave me clear understanding on how to integrate Materialize into react and use it properly.
+
+The other difficulty I ran into was creating notification for the user using socket.io. This was another thing I was really not too familiar with but wanted to challenge myself. I did research on the different variation on how to use it and create the notification. I would say It was definitely worth the time it took accomplish the thing I wanted.
+
+I would say utilizing all my knowledge and tools that I have garnered in the UW Full Stack Web Development program made the build all that much amazing to know that I am capable and can do so much more. 
 
 
 ## Questions
