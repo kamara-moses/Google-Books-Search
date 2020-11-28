@@ -4,8 +4,8 @@ import Navbar from "../components/Navbar/Nav";
 import Jumbotron from "../components/Jumbotron/Jumbotron";
 import { Input, SubmitBtn } from "../components/Search/Search";
 import ResultList from "../components/ResultList/ResultList";
-import AlertMessage from "../components/AlertMessage/AlertMessage";
 import API from "../utils/API";
+
 
 class Home extends Component {
   state = {
@@ -50,7 +50,9 @@ class Home extends Component {
       image: currentBook.image,
       link: currentBook.link,
     })
-    .then(res => console.log("Successful POST to DB!", res))
+                //Display to all users that the book was saved. 
+                window.M.toast({ html: 'Book saved!' });
+                window.ioSocket.emit('message', `A new book titled '${currentBook.title}' was saved!`)
     .catch(err => console.log("this is the error", err));
   };
 
@@ -70,10 +72,6 @@ class Home extends Component {
             />
             <SubmitBtn onClick={this.handleFormSubmit} />
           </form>
-          {this.state.updateBook 
-                        ? <AlertMessage heading="Book saved" message={`"${this.state.search}" has been added to favorites.`}/>
-                        : null
-        } 
           {this.state.books.length ? (
                     <ResultList 
                     bookState={this.state.books}
