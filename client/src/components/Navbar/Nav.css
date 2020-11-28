@@ -1,10 +1,12 @@
-.navbar {
-    background-color: #95cbf7;
+nav {
     margin-bottom: 10px;
+
 }
 
-.navbar .nav-item .nav-link:hover {
+.right li:hover {
     background-color: #fff;
-    color: #c9c5c5;
 }
 
+.brand-logo {
+    margin-left: 10px;
+}

@@ -1,30 +1,38 @@
-import React from 'react';
+import React from "react";
 import "./Nav.css";
-import {Link} from "react-router-dom";
-
+import { Link } from "react-router-dom";
 
 function Nav() {
-
-    return (
-        <div>
-            <nav className="navbar navbar-expand-lg navbar-dark">
-                <Link className="navbar-brand" to="/">Google Books Search</Link>
-                <button className="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-                    <span className="navbar-toggler-icon"></span>
-                </button>
-                <div className="collapse navbar-collapse justify-content-end" id="navbarNav">
-                    <ul className="navbar-nav">
-                        <li className="nav-item active">
-                            <Link className="nav-link" to="/">Home<span className="sr-only">(current)</span></Link>
-                        </li>
-                        <li className="nav-item active">
-                            <Link className="nav-link" to="/saved">Saved</Link>
-                        </li>
-                    </ul>
-                </div>
-            </nav>
+  return (
+    <div>
+      <nav>
+        <div className="nav-wrapper">
+          <a className="brand-logo">
+            Google Books Search
+          </a>
+          <a href="#" data-target="slide-out" className="sidenav-trigger">
+            <i className="material-icons">menu</i>
+          </a>
+          <ul className="right hide-on-med-and-down">
+            <li>
+              <Link to="/">Home</Link>
+            </li>
+            <li>
+              <Link to="/saved">Saved</Link>
+            </li>
+          </ul>
         </div>
-    )
+      </nav>
+      <ul id="slide-out" className="sidenav">
+        <li>
+          <Link to="/">Home</Link>
+        </li>
+        <li>
+          <Link to="/saved">Saved</Link>
+        </li>
+      </ul>
+    </div>
+  );
 }
 
 export default Nav;

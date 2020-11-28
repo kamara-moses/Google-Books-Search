@@ -18,7 +18,7 @@ class ResultListItem extends Component {
   getStyle = () => {
     if (this.state.text === "Save") {
       this.setState({
-        bgColor: "#00E000",
+        bgColor: "#234378",
         color: "white",
         text: "Saved",
       });
@@ -59,7 +59,7 @@ class ResultListItem extends Component {
               href={this.props.link}
               target="_blank"
               rel="noopener noreferrer"
-              className="btn btn-primary"
+              className="btn btn-dark"
               style={{ marginRight: "6px" }}
             >
               View Book

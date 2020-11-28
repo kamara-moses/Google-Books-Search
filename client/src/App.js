@@ -2,13 +2,17 @@ import React, { Component } from "react";
 import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
 import Home from "./pages/Home";
 import Saved from "./pages/Saved";
+import 'materialize-css/dist/css/materialize.min.css';
+
 import "./App.css";
 
 
 
 class App extends Component {
-
-
+  componentDidMount() {
+    let sidenav = document.querySelector('#slide-out');
+    M.Sidenav.init(sidenav, {});
+  }
   render() {
     return (
       <Router>
