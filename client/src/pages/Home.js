@@ -50,10 +50,12 @@ class Home extends Component {
       image: currentBook.image,
       link: currentBook.link,
     })
-                //Display to all users that the book was saved. 
-                window.M.toast({ html: `A new book titled '${currentBook.title}' was saved!` })
-    .catch(err => console.log("this is the error", err));
-  };
+    .then(res => {
+        //Display to all users that the book was saved. 
+         window.M.toast({ html: `A new book titled '${currentBook.title}' was saved!` })
+         .catch(err => console.log("this is the error", err));
+    })
+};
 
   render() {
     return (
