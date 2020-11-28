@@ -4,7 +4,7 @@
 ## Description:
 An application created using the MERN stack and allows users to search for books via the Google Books API. Search results are dynamically rendered in the UI and users have the option to save and/or delete books. Users are notified of saving or deleting books from the db using Socket.io.
 
-<img src="src/assets/img/googlebooks.png" alt="Google Books Search">
+<img src="../../img/googlebooks.png" alt="Google Books Search">
 
 ## Technologies:
 - Bootstrap
@@ -65,7 +65,7 @@ To Visit App:
 
     7. Upon clicking the delete button, users will be notified that they delete the book with the title of the DB.
 
-![Google Books Search Demo](src/assets/img/google-books.gif)
+![Google Books Search Demo](../../img/google-books.gif)
 
 
 ## Contributors
