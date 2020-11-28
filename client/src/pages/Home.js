@@ -71,7 +71,7 @@ class Home extends Component {
             <SubmitBtn onClick={this.handleFormSubmit} />
           </form>
           {this.state.updateBook 
-                        ? <AlertMessage heading="Book saved" message={`"${this.state.savedBookTitle}" has been added to favorites.`}/>
+                        ? <AlertMessage heading="Book saved" message={`"${this.state.search}" has been added to favorites.`}/>
                         : null
         } 
           {this.state.books.length ? (
