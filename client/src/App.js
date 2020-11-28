@@ -4,10 +4,6 @@ import Home from "./pages/Home";
 import Saved from "./pages/Saved";
 import 'materialize-css/dist/css/materialize.min.css';
 
-import "./App.css";
-
-
-
 class App extends Component {
   componentDidMount() {
     let sidenav = document.querySelector('#slide-out');
